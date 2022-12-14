@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "NODE_ENV=production node --require ./appsignal.cjs server.js"
   },
   "dependencies": {
+    "@appsignal/nodejs": "^3.0.1",
     "next": "13.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0"
